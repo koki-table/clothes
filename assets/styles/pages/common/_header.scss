@@ -1,0 +1,135 @@
+// nav
+
+
+/*----------------------------
+* メニュー開閉ボタン
+*----------------------------*/
+.menu-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 3;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #333;
+  color: #fff;
+  z-index: 4;
+}
+
+/*----------------------------
+  * メニュー本体
+  *----------------------------*/
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #555;
+}
+.menu__item {
+  width: 100%;
+  height: auto;
+  padding: 0.5em 1em;
+  text-align: center;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+/*----------------------------
+  * アニメーション部分
+  *----------------------------*/
+
+/* アニメーション前のメニューの状態 */
+.menu {
+  transform: translateX(100vw);
+  transition: all 0.3s linear;
+}
+/* アニメーション後のメニューの状態 */
+.menu.is-active {
+  transform: translateX(0);
+  z-index: 3;
+}
+
+
+
+
+
+// btn
+/*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+.open-btn{
+    // position: relative;/*ボタン内側の基点となるためrelativeを指定*/
+    background:#57a2c7;
+    cursor: pointer;
+      width: 50px;
+      height:50px;
+    border-radius: 5px;
+  }
+  
+  /*ボタン内側*/
+  .open-btn span{
+      display: inline-block;
+      transition: all .4s;/*アニメーションの設定*/
+      position: absolute;
+      left: 14px;
+      height: 3px;
+      border-radius: 2px;
+    background: #fff;
+      width: 45%;
+    }
+  
+  .open-btn span:nth-of-type(1) {
+    top:15px; 
+  }
+  
+  .open-btn span:nth-of-type(2) {
+    top:23px;
+  }
+  
+  .open-btn span:nth-of-type(3) {
+    top:31px;
+  }
+  
+  /*activeクラスが付与されると線が回転して×に*/
+  
+  .open-btn.active span:nth-of-type(1) {
+      top: 18px;
+      left: 18px;
+      transform: translateY(6px) rotate(-45deg);
+      width: 30%;
+  }
+  
+  .open-btn.active span:nth-of-type(2) {
+    opacity: 0;/*真ん中の線は透過*/
+  }
+  
+  .open-btn.active span:nth-of-type(3){
+      top: 30px;
+      left: 18px;
+      transform: translateY(-6px) rotate(45deg);
+      width: 30%;
+  }
+  /*========= レイアウトのためのCSS ===============*/
+  
+  
+  a{
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .lead{
+    margin:20px 0 0 0;
+  }
+  
+  .btn-block{
+    width:200px;  
+    padding: 30px;
+  }
