@@ -1,0 +1,19 @@
+body {
+  font-family: "YakuHanJP", "Noto Sans JP", sans-serif;
+  font-size: 13px;
+  letter-spacing: 1px;
+  -webkit-font-feature-settings: "palt" 1;
+  font-feature-settings: "palt" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.l-container {
+  width: 100%;
+  padding: 0 30px;
+
+  @include media-breakpoint-up(768px) {
+    padding: 0 20px;
+  }
+}

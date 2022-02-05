@@ -1,10 +1,10 @@
-html {
-  min-width: map-get($grid-breakpoints, xs);
+// html {
+//   min-width: map-get($grid-breakpoints, xs);
 
-  @include media-breakpoint-up(md) {
-    min-width: map-get($grid-breakpoints, xl);
-  }
-}
+//   @include media-breakpoint-up(md) {
+//     min-width: map-get($grid-breakpoints, xl);
+//   }
+// }
 
 body {
   font-family: 'YakuHanJP', 'Noto Sans JP', sans-serif;

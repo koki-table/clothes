@@ -1,0 +1,37 @@
+.sec-colection {
+  padding: 70px 0 70px;
+
+  &__items {
+    @include media-breakpoint-up(768px) {
+      display: flex;
+      justify-content: center;
+    }
+    .item {
+      @include media-breakpoint-up(768px) {
+        margin: 0 4.2%;
+        width: 41%;
+      }
+      &__img {
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      &__txt {
+        font-size: 16px;
+        font-family: "Lato", sans-serif;
+        text-align: left;
+        font-weight: 700;
+        letter-spacing: 1.6px;
+        margin-top: 10px;
+      }
+      + .item {
+        margin-top: 70px;
+        @include media-breakpoint-up(768px) {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}

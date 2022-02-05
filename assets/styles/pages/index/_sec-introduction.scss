@@ -1,0 +1,113 @@
+.sec-introduction {
+  padding: 100px 0 70px;
+
+  @include media-breakpoint-up(768px) {
+    padding: 140px 0 100px;
+  }
+
+  .introduction {
+    @include media-breakpoint-up(768px) {
+      display: flex;
+      align-items: center;
+    }
+
+    &__img {
+      margin-left: -30px;
+      @include media-breakpoint-up(768px) {
+        width: 67.6%;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .reverse {
+      margin-left: 0;
+    }
+
+    &__txt {
+      @include media-breakpoint-up(768px) {
+        width: 32.4%;
+        margin: 0px 60px 30px;
+      }
+      @include media-breakpoint-down(767px) {
+        max-width: 330px;
+      }
+      .title {
+        font-size: 55px;
+        font-weight: 900;
+        line-height: 1;
+        margin-top: 30px;
+        letter-spacing: 0.03em;
+        font-family: "Lato", sans-serif;
+      }
+
+      .main {
+        font-size: 20px;
+        font-weight: bold;
+        font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", serif;
+        margin-top: 15px;
+        @include media-breakpoint-up(768px) {
+          margin-top: 25px;
+        }
+
+        span {
+          color: #af9b50;
+          font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+        }
+      }
+
+      .sub {
+        line-height: 1.8;
+        text-align: justify;
+        font-size: 13px;
+        margin-top: 10px;
+
+        @include media-breakpoint-up(768px) {
+          margin-top: 25px;
+        }
+      }
+      &--btn {
+        margin-top: 30px;
+        text-align: center;
+        font-size: 12px;
+        width: auto;
+        @include media-breakpoint-up(768px) {
+          width: 65%;
+        }
+
+        a {
+          padding: 17px 0px 18px;
+          background-color: #ae9b4f;
+          font-weight: 700;
+          font-family: "Lato", sans-serif;
+          display: block;
+          position: relative;
+
+          &::after {
+            content: "";
+            position: absolute;
+            background: url(/assets/images/pages/index/icon06.png) no-repeat center;
+            width: 24px;
+            height: 12px;
+            top: 0;
+            background-size: 16px auto;
+            bottom: 0;
+            left: 22%;
+            margin: auto;
+          }
+        }
+      }
+    }
+
+    + .introduction {
+      margin-top: 100px;
+      @include media-breakpoint-up(768px) {
+        flex-direction: row-reverse;
+        margin-top: 140px;
+      }
+    }
+  }
+}
