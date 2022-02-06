@@ -29,6 +29,7 @@
     "no-scroll": "^2.1.1",
     "objectFitPolyfill": "^2.1.1",
     "picturefill": "^3.0.3",
+    "popmotion": "^11.0.3",
     "react-burger-menu": "^3.0.6",
     "rellax": "^1.12.1",
     "ress": "^1.2.2",

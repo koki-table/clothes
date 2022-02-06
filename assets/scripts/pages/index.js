@@ -1,7 +1,13 @@
 import Vue from "vue";
 import ScrollReveal from "scrollreveal";
 import Rellax from "rellax";
+import { animate } from "popmotion";
 
+animate({
+  from: 0,
+  to: 100,
+  onUpdate: (latest) => console.log(latest),
+});
 
 // nav
 // eslint-disable-next-line no-unused-vars
@@ -29,8 +35,6 @@ btn.addEventListener("click", function(el) {
   btn.classList.toggle("active");
 });
 
-
-
 // fade
 ScrollReveal().reveal(".sec-mv", {
   duration: 1800, // アニメーションの完了にかかる時間
@@ -45,12 +49,33 @@ ScrollReveal().reveal(".fade", {
 });
 
 // parallax
-var rellax = new Rellax('.rellax', {
+var rellax = new Rellax(".rellax", {
   speed: -2,
   center: false,
   wrapper: null,
   round: true,
   vertical: true,
-  horizontal: false
+  horizontal: false,
 });
 
+// animate
+
+// const { styler, spring, listen, pointer, value } = window.popmotion;
+
+// const ball = document.querySelector("animate-target");
+// const divStyler = styler(ball);
+// const ballXY = value({ x: 0, y: 0 }, divStyler.set);
+
+// listen(ball, "mousedown touchstart").start((e) => {
+//   e.preventDefault();
+//   pointer(ballXY.get()).start(ballXY);
+// });
+
+// listen(document, "mouseup touchend").start(() => {
+//   spring({
+//     from: ballXY.get(),
+//     velocity: ballXY.getVelocity(),
+//     to: { x: 0, y: 0 },
+//     stiffness: 200,
+//   }).start(ballXY);
+// });
